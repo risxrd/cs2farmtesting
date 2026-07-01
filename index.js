@@ -12,9 +12,9 @@ app.listen(port, () => console.log(`Sunucu ${port} portunda dinleniyor.`));
 const client = new SteamUser();
 
 const logOnOptions = {
-    accountName: process.env.STEAM_USERNAME,
-    password: process.env.STEAM_PASSWORD,
-    twoFactorCode: SteamTotp.generateAuthCode(process.env.SHARED_SECRET)
+    accountName: process.env.ardab2134,
+    password: process.env.1905ardaM1907,
+    twoFactorCode: SteamTotp.generateAuthCode(process.env.XN8YQ)
 };
 
 client.logOn(logOnOptions);
