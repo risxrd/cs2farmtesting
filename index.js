@@ -4,20 +4,19 @@ const express = require('express');
 require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
-app.get('/', (req, res) => res.send('Aktif'));
-app.listen(port);
+app.get('/', (req, res) => res.send('OK'));
+app.listen(process.env.PORT || 3000);
 
 const client = new SteamUser();
 
 client.logOn({
     accountName: process.env.ardab2134,
     password: process.env.1905ardaM1907,
-    twoFactorCode: SteamTotp.generateAuthCode(process.env.G255W)
+    twoFactorCode: SteamTotp.generateAuthCode(process.env.G65X3)
 });
 
 client.on('loggedOn', () => {
-    console.log('Giris basarili');
+    console.log('Basarili');
     client.setPersona(1);
     client.gamesPlayed([730]);
 });
